@@ -79,7 +79,9 @@ def handle_dialog(req, res):
         'ладно',
         'куплю',
         'покупаю',
-        'хорошо'
+        'хорошо',
+        'Я покупаю',
+        'Я куплю'
     ]:
         # Пользователь согласился, прощаемся.
         res['response']['text'] = 'Слона можно найти на Яндекс.Маркете!'
@@ -119,8 +121,5 @@ def get_suggests(user_id):
     return suggests
 
 
-def main():
-    app.run(port=8080, host='127.0.0.1')
-
 if __name__ == '__main__':
-    main()
+    app.run()
